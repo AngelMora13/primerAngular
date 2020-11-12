@@ -1,0 +1,100 @@
+.titulo{
+    justify-self: center;
+    text-align: center;
+
+}
+h1{
+    font-size: 2rem;
+}
+.primerContenedor{
+    background: rgba(255, 255, 255, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.segundoContenedor{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.materiasPrimas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+.mp__contenedor{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.seleccion__lista{
+    margin-top: 10px;
+}
+.seleccion__lista li{
+    margin: 0 0 15px 0;
+}
+
+.seleccion__lista-propiedad{
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: all 0.25s ease-out;
+    color: blue;
+
+}
+.seleccion__lista div:hover li ~ .seleccion__lista-propiedad{
+    height: 115px;
+    visibility: visible;
+    transition: all 0.5s ease-in;
+}
+
+ul{
+    width: 200px;
+    padding: 0;
+}
+ul li{
+    list-style-type: none;
+
+}
+.gridLista{
+    display: grid;
+    grid-template-columns: 200px;
+}
+.cantidadMP input{
+    margin-top: 10px;
+    outline: none;
+    border-radius: 5px;
+}
+input:focus{
+    border: 2px solid orange;
+}
+
+.navegacion{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.espaciador{
+    border: 10px solid royalblue;
+}
+
+.resultados{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-grow: 1;
+}
+.resultados aside{
+    align-self: center;
+}
+#tablaResultado tr th,#tablaResultado tr td{
+    padding: 10px;
+    text-align: center;
+}

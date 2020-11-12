@@ -1,0 +1,12 @@
+
+div{
+    display: grid;
+    grid-template-columns: 0.2fr 0.8fr;
+    grid-template-rows: 0.1fr 0.8fr;
+    justify-content: center;
+}
+.lol{
+    grid-row-start: 1;
+    grid-row-end: 4;
+
+}

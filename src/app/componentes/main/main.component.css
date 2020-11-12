@@ -1,0 +1,142 @@
+.contenedor{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+.seleccion{
+    display: flex;
+    flex-direction: column;
+    background: gray;
+    border-radius: 5px;
+    height: max-content;
+
+}
+.btnMP{
+    text-decoration: none;
+    color: black;
+    margin: 0 10px;
+    cursor: pointer;
+    background: gray;
+    padding: 10px;
+    border-bottom: white 1px solid;
+}
+.contenedorInterno{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.9);
+    max-width: 1000px;
+    padding: 20px;
+}
+.contenedorTitulo, .tituloMP{
+    justify-self: center;
+    text-align: center;
+
+}
+h1{
+    font-size: 2rem;
+}
+.contenedorContenido{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.seleccionMP{
+    display: flex;
+    flex-direction: row;
+}
+
+.materiasPrimas{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.listaMP{
+    margin-left: 20px;
+    margin-top: 0;
+}
+.listaMP li{
+    margin: 0 0 15px 0;
+}
+
+.propiedadMP{
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: all 0.25s ease-out;
+    color: blue;
+
+}
+.listaMP div:hover li ~ .propiedadMP{
+    height: 115px;
+    visibility: visible;
+    transition: all 0.5s ease-in;
+
+}
+
+ul{
+    width: 200px;
+    padding: 0;
+}
+ul li{
+    list-style-type: none;
+
+}
+.deleteSeleccion{
+    margin-left: 10px;
+    margin-right: 5px;
+}
+.deleteSeleccion:hover{
+    outline: none;
+    border: none;
+    box-shadow: 0.5px 0.5px 5px 1px red;
+}
+
+.boton{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+.boton .listo, .boton .reset, .boton .restore{
+    border: none;
+    border-radius: 5px;
+    width: 80px;
+    height: 35px;
+    color: white;
+    margin-left: 10px;
+    outline: none;
+    
+}
+.listo{
+    background: green;
+}
+
+.reset{
+    background: orangered;
+}
+.restore{
+    background: steelblue;
+}
+
+.cantidadMP input{
+    margin-top: 10px;
+    outline: none;
+    border-radius: 5px;
+}
+input:focus{
+    border: 2px solid orange;
+}
+.resultados{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.resultados aside{
+    align-self: center;
+}
+#tablaResultado tr th,#tablaResultado tr td{
+    padding: 10px;
+    text-align: center;
+}

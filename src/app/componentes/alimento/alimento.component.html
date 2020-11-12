@@ -1,0 +1,74 @@
+<article class="primerContenedor">
+    <header class="titulo">
+      <h1>{{ titulo }}</h1>
+    </header>
+    <!--Seleccion y cantidades de materias primas-->
+    <div class="segundoContenedor">
+      <aside class="materiasPrimas">
+        <header class="titulo"><h1>Ingresar Valores</h1></header>
+        <div class="mp__contenedor">
+        <ul class="seleccion__lista">
+          <div *ngFor="let mp of seleccionMP" class="gridLista">
+            <li class="none"><label for="{{ mp.Nombre }}">{{ mp.Nombre }}</label></li>
+            <ul class="seleccion__lista-propiedad">
+              <label for="{{ mp.Nombre }}">
+              <li>% Humedad: {{ mp.Humedad }}</li>
+              <li>% Proteina: {{ mp.Proteina }}</li>
+              <li>% Grasa: {{ mp.Grasa }}</li>
+            </label>
+            </ul>
+          </div>
+        </ul>
+        <aside class="cantidadMP">
+          <form>
+          <div *ngFor="let mp of seleccionMP">
+            <input
+              type="number"
+              id="{{ mp.Nombre }}"
+              name="{{mp.Nombre}}"
+              placeholder="{{ mp.Nombre }}"
+              [(ngModel)]=id[mp.id]
+            />
+            </div>
+        </form>
+        </aside>
+      </div>
+        <nav class="navegacion">
+          <button class="btnNext" routerLink="/formular">Retroceder</button>
+          <button type="button" class="listo" (click)="onListo()">Listo</button>
+          <button type="button" class="restore" (click)="onRestore()">Restablecer</button>
+        </nav>
+      </aside>
+      <div class="espaciador"></div>
+      <!--resultados-->
+    <article class="resultados">
+      <header class="titulo">
+        <h1>Resultados del Alimento</h1>
+      </header>
+      <aside>
+        <table id="tablaResultado">
+          <tr>
+            <th>Propiedad Fisicoquimica</th>
+            <th>Valor</th>
+          </tr>
+          <tr>
+            <td>Masa (u)</td>
+            <td>{{ resultadoMasa }}</td>
+          </tr>
+          <tr>
+            <td>Humedad (%)</td>
+            <td>{{ resultadohumedad.toFixed(4) }}</td>
+          </tr>
+          <tr>
+            <td>Proteina (%)</td>
+            <td>{{ resultadoProteina.toFixed(4) }}</td>
+          </tr>
+          <tr>
+            <td>grasa (%)</td>
+            <td>{{ resultadoGrasa.toFixed(4) }}</td>
+          </tr>
+        </table>
+      </aside>
+    </article>
+  </div>
+   </article>

@@ -1,0 +1,67 @@
+.primerContenedor{
+    background: royalblue;    
+    border-radius: 0 10px 10px 0;
+}
+.segundoConetendor{
+    padding: 5px;
+}
+.navegacion{
+    height: 100%;
+}
+.navegacion__Lista{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+
+}
+a{
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    background: white;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+a:hover{
+    background: rgba(0, 0, 255, 0.6);;
+    color: white;
+}
+
+.tutoriales__lista{
+    position: absolute;
+    visibility: hidden;
+    height: 0px;
+    overflow: hidden;
+    transition: 0.25s all ease-out;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px black;
+}
+.lista{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+}
+.lista li{
+    margin: 15px;
+}
+
+.tutoriales:hover .tutoriales__lista{
+    visibility: visible;
+    height: 80px;
+    width: auto;
+    transition: all 0.3s ease-in;
+    background: rgba(189, 188, 235, 0.3);
+
+}
+.lista li a:hover{
+    background: blue;
+    color: white;
+}

@@ -1,0 +1,18 @@
+.primerContenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.7);
+
+}
+nav{
+    display: flex;
+    flex-direction: column;
+}
+
+img{
+    margin: 20px;
+    width: 100%;
+    height: 150px;
+}

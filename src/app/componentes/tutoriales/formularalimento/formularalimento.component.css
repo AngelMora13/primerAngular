@@ -1,0 +1,37 @@
+.primerContenedor{
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.segundoContenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px;
+    padding: 20px;
+
+}
+.tercerContenedor{
+    width: 650px;
+    margin: 20px;
+}
+.paginas{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.imagen1,.imagen2{
+    width: 200px;
+    height: 250px;
+}
+.imagen3,.imagen4,.imagen5{
+    width: 600px;
+    height: 300px;
+}
+p,li{
+    text-align: justify;
+    font-size: 1.3rem;
+    margin-top: 5px;
+}

@@ -1,0 +1,44 @@
+<article class="primerContenedor">
+  <header class="titulo">
+    <h1>{{ titulo }}</h1>
+  </header>
+  <!--Seleccion y cantidades de materias primas-->
+  <section class="materiasPrimas">
+    <header class="titulo">
+      <h1>Seleccion de materias primas</h1>
+    </header>
+    <aside class="materiasPrimas__contenedor">
+      <div class="materiasPrimas__contenedor-seleccion">
+        <a
+          *ngFor="let mp of materiasPrimas"
+          (click)="onClick(mp)"
+          class="btnMP"
+          >{{ mp.Nombre }}</a
+        >
+      </div>
+      <ul class="seleccion__lista">
+        <div *ngFor="let mp of seleccionMP" class="gridLista">
+          <li class="none">{{ mp.Nombre }}</li>
+          <div>
+            <input
+              type="checkbox"
+              class="deleteSeleccion"
+              (change)="deleteSeleccion(mp)"
+            /><span>Eliminar</span>
+          </div>
+          <ul class="seleccion__lista-propiedad">
+            <li>% Humedad: {{ mp.Humedad }}</li>
+            <li>% Proteina: {{ mp.Proteina }}</li>
+            <li>% Grasa: {{ mp.Grasa }}</li>
+          </ul>
+        </div>
+      </ul>
+    </aside>
+  </section>
+  <nav class="navegacion">
+    <div class="espaciador"></div>
+    <button class="btnRestore" (click)="onReset()">Restaurar</button>
+    <button class="btnNext" (click)="onSiguiente()" routerLink="/formular/alimento">Siguiente</button>
+  </nav>
+</article>
+
